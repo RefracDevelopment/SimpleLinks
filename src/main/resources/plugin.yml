@@ -10,7 +10,7 @@ description: 'A simple links plugin'
 website: 'https://discord.gg/EFeSKPg739'
 
 commands:
-  simplelinks:
+  links:
     description: 'Links command'
-  simplelinksreload:
+  linksreload:
     description: 'Reload Command'
