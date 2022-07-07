@@ -22,6 +22,7 @@
 package me.refrac.simplelinks.commands;
 
 import me.refrac.simplelinks.SimpleLinks;
+import me.refrac.simplelinks.menu.LinksItem;
 import me.refrac.simplelinks.utilities.Manager;
 import me.refrac.simplelinks.utilities.chat.Color;
 import me.refrac.simplelinks.utilities.files.Config;
@@ -50,6 +51,9 @@ public class LinksReloadCommand extends Manager implements CommandExecutor {
 
         Files.reloadFiles(plugin);
         Config.loadConfig();
+        plugin.getLinksMenu().getItems().clear();
+        for (String item : Config.MENU_ITEMS.getKeys(false))
+            plugin.getLinksMenu().getItems().put(item, new LinksItem(item));
         Color.sendMessage(sender, Config.RELOAD, true, true);
         return true;
     }
