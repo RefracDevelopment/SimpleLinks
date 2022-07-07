@@ -1,0 +1,14 @@
+name: 'SimpleLinks'
+version: '${project.version}'
+main: me.refrac.simplelinks.SimpleLinks
+softdepend:
+  - PlaceholderAPI
+author: 'Refrac'
+description: 'A simple links plugin'
+website: 'https://discord.com/invite/EFeSKPg739'
+
+commands:
+  simplelinks:
+    description: 'Links command'
+  simplelinksreload:
+    description: 'Reload Command'
