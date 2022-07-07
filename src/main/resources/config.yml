@@ -26,57 +26,57 @@ links:
 
 menu:
   enabled: true
-    title: "&dServer Links"
-    size: 54
-    fill:
-      material: STAINED_GLASS_PANE
-      data: 15
-      name: "&7"
+  title: "&dServer Links"
+  size: 54
+  fill:
+    material: STAINED_GLASS_PANE
+    data: 15
+    name: "&7"
+    lore:
+      - ""
+  # Infinite items can be added or removed
+  items:
+    website:
+      material: DOUBLE_PLANT
+      data: 0
+      name: "&eWebsite"
       lore:
-        - ""
-    # Infinite items can be added or removed
-    items:
-      website:
-        material: DOUBLE_PLANT
-        data: 0
-        name: "&eWebsite"
-        lore:
-          - "&7Click to receive a link to the website."
-        message:
-          enabled: true
-          text:
-            - "&eWebsite: &dhttps://yourserver.com"
-        slot: 10
-      discord:
-        material: DOUBLE_PLANT
-        data: 0
-        name: "&eDiscord"
-        lore:
-          - "&7Click to receive a link to the discord."
-        message:
-          enabled: true
-          text:
-            - "&eDiscord: &dhttps://discord.gg/yourservercode"
-        slot: 12
-      store:
-        material: DOUBLE_PLANT
-        data: 0
-        name: "&eStore"
-        lore:
-          - "&7Click to receive a link to the store."
-        message:
-          enabled: true
-          text:
-            - "&eStore: &dhttps://store.yourserver.net"
-        slot: 14
-      twitter:
-        material: DOUBLE_PLANT
-        data: 0
-        name: "&eTwitter"
-        lore:
-          - "&7Click to receive a link to the twitter."
-        message:
-          enabled: true
-          text:
-            - "&eTwitter: &dhttps://twitter.com/yourserver"
-        slot: 15
+        - "&7Click to receive a link to the website."
+      message:
+        enabled: true
+        text:
+          - "&eWebsite: &dhttps://yourserver.com"
+      slot: 10
+    discord:
+      material: DOUBLE_PLANT
+      data: 0
+      name: "&eDiscord"
+      lore:
+        - "&7Click to receive a link to the discord."
+      message:
+        enabled: true
+        text:
+          - "&eDiscord: &dhttps://discord.gg/yourservercode"
+      slot: 12
+    store:
+      material: DOUBLE_PLANT
+      data: 0
+      name: "&eStore"
+      lore:
+        - "&7Click to receive a link to the store."
+      message:
+        enabled: true
+        text:
+          - "&eStore: &dhttps://store.yourserver.net"
+      slot: 14
+    twitter:
+      material: DOUBLE_PLANT
+      data: 0
+      name: "&eTwitter"
+      lore:
+        - "&7Click to receive a link to the twitter."
+      message:
+        enabled: true
+        text:
+          - "&eTwitter: &dhttps://twitter.com/yourserver"
+      slot: 15
