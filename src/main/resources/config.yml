@@ -42,6 +42,10 @@ menu:
         name: "&eWebsite"
         lore:
           - "&7Click to receive a link to the website."
+        message:
+          enabled: true
+          text:
+            - "&eWebsite: &dhttps://yourserver.com"
         slot: 10
       discord:
         material: DOUBLE_PLANT
@@ -49,7 +53,10 @@ menu:
         name: "&eDiscord"
         lore:
           - "&7Click to receive a link to the discord."
-        message: "&eDiscord: &dhttps://discord.gg/yourservercode"
+        message:
+          enabled: true
+          text:
+            - "&eDiscord: &dhttps://discord.gg/yourservercode"
         slot: 12
       store:
         material: DOUBLE_PLANT
@@ -57,7 +64,10 @@ menu:
         name: "&eStore"
         lore:
           - "&7Click to receive a link to the store."
-        message: "&eStore: &dhttps://store.yourserver.net"
+        message:
+          enabled: true
+          text:
+            - "&eStore: &dhttps://store.yourserver.net"
         slot: 14
       twitter:
         material: DOUBLE_PLANT
@@ -65,5 +75,8 @@ menu:
         name: "&eTwitter"
         lore:
           - "&7Click to receive a link to the twitter."
-        message: "&eTwitter: &dhttps://twitter.com/yourserver"
+        message:
+          enabled: true
+          text:
+            - "&eTwitter: &dhttps://twitter.com/yourserver"
         slot: 15

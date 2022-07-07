@@ -3,9 +3,11 @@ version: '${project.version}'
 main: me.refrac.simplelinks.SimpleLinks
 softdepend:
   - PlaceholderAPI
+  - HeadDatabase
+  - Skulls
 author: 'Refrac'
 description: 'A simple links plugin'
-website: 'https://discord.com/invite/EFeSKPg739'
+website: 'https://discord.gg/EFeSKPg739'
 
 commands:
   simplelinks:
