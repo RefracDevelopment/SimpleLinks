@@ -26,6 +26,8 @@ import me.refrac.simplelinks.commands.LinksCommand;
 import me.refrac.simplelinks.commands.LinksReloadCommand;
 import me.refrac.simplelinks.listeners.JoinListener;
 import me.refrac.simplelinks.menu.Links;
+import me.refrac.simplelinks.utilities.files.Config;
+import me.refrac.simplelinks.utilities.files.Files;
 import org.bstats.bukkit.Metrics;
 import org.bukkit.plugin.java.JavaPlugin;
 
@@ -43,6 +45,9 @@ public class SimpleLinks extends JavaPlugin {
     public void onEnable() {
         // Plugin startup logic
         long startTiming = System.currentTimeMillis();
+
+        Files.loadFiles(this);
+        Config.loadConfig();
 
         getCommand("links").setExecutor(new LinksCommand(this));
         getCommand("linksreload").setExecutor(new LinksReloadCommand(this));

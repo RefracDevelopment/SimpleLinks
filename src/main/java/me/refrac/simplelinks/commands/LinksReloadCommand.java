@@ -49,6 +49,7 @@ public class LinksReloadCommand extends Manager implements CommandExecutor {
         }
 
         Files.reloadFiles(plugin);
+        Config.loadConfig();
         Color.sendMessage(sender, Config.RELOAD, true, true);
         return true;
     }
