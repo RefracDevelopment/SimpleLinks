@@ -1,16 +1,24 @@
-name: 'SimpleLinks'
-version: '${project.version}'
-main: me.refrac.simplelinks.SimpleLinks
+name: SimpleLinks
+version: '@version@'
+main: me.refracdevelopment.simplelinks.SimpleLinks
+author: RefracDevelopment
+api-version: "1.13"
 softdepend:
   - PlaceholderAPI
-  - HeadDatabase
   - Skulls
-author: 'Refrac'
-description: 'A simple links plugin'
-website: 'https://discord.gg/EFeSKPg739'
+  - HeadDatabase
+description: A simple links plugin
+website: https://discord.refracdev.ml/
 
-commands:
-  links:
-    description: 'Links command'
-  linksreload:
-    description: 'Reload Command'
+permissions:
+  simplelinks.*:
+    description: Gives access to all SimpleLinks commands
+    children:
+      simplelinks.reload: true
+      simplelinks.version: true
+  simplelinks.reload:
+    description: Gives access to the reload command
+    default: op
+  simplelinks.version:
+    description: Gives access to the version command
+    default: op
