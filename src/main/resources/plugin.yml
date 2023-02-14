@@ -3,8 +3,9 @@ version: '@version@'
 main: me.refracdevelopment.simplelinks.SimpleLinks
 author: RefracDevelopment
 api-version: "1.13"
-softdepend:
+depend:
   - PlaceholderAPI
+softdepend:
   - Skulls
   - HeadDatabase
 description: A simple links plugin
@@ -14,11 +15,11 @@ permissions:
   simplelinks.*:
     description: Gives access to all SimpleLinks commands
     children:
-      simplelinks.reload: true
-      simplelinks.version: true
-  simplelinks.reload:
+      simplelinks.command.reload: true
+      simplelinks.command.version: true
+  simplelinks.command.reload:
     description: Gives access to the reload command
     default: op
-  simplelinks.version:
+  simplelinks.command.version:
     description: Gives access to the version command
     default: op

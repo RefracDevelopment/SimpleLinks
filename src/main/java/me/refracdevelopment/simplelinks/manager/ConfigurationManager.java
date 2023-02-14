@@ -15,7 +15,7 @@ public class ConfigurationManager extends AbstractConfigurationManager {
         // Config Settings
         MENU_ENABLED("menu.enabled", true),
         MENU_TITLE("menu.title", "&dServer Links"),
-        MENU_SIZE("menu.size", 36),
+        MENU_SIZE("menu.size", 27),
         MENU_FILL_MATERIAL("menu.fill.material", "BLACK_STAINED_GLASS_PANE"),
         MENU_FILL_DATA("menu.fill.data", 0),
         MENU_FILL_NAME("menu.fill.name", "&7"),

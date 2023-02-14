@@ -6,7 +6,7 @@
 
     <groupId>me.refracdevelopment.simplelinks</groupId>
     <artifactId>SimpleLinks</artifactId>
-    <version>3.1-beta.3</version>
+    <version>3.1-rc.1-SNAPSHOT</version>
     <packaging>jar</packaging>
 
     <name>SimpleLinks</name>
@@ -17,9 +17,17 @@
     </properties>
 
     <build>
-        <finalName>${project.artifactId}-${project.version}</finalName>
-        <defaultGoal>install</defaultGoal>
+        <defaultGoal>package</defaultGoal>
         <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.8.1</version>
+                <configuration>
+                    <source>${java.version}</source>
+                    <target>${java.version}</target>
+                </configuration>
+            </plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-shade-plugin</artifactId>
@@ -34,42 +42,17 @@
                             <createDependencyReducedPom>false</createDependencyReducedPom>
                             <relocations>
                                 <relocation>
-                                    <pattern>org.bstats</pattern>
-                                    <shadedPattern>me.refracdevelopment.simplelinks.bstats</shadedPattern>
-                                </relocation>
-                                <relocation>
                                     <pattern>dev.rosewood.rosegarden</pattern>
                                     <shadedPattern>me.refracdevelopment.simplelinks.rosegarden</shadedPattern>
+                                </relocation>
+                                <relocation>
+                                    <pattern>com.cryptomorin.xseries</pattern>
+                                    <shadedPattern>me.refracdevelopment.simplelinks.xseries</shadedPattern>
                                 </relocation>
                             </relocations>
                         </configuration>
                     </execution>
                 </executions>
-            </plugin>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-compiler-plugin</artifactId>
-                <version>3.8.1</version>
-                <executions>
-                    <execution>
-                        <id>compile</id>
-                        <phase>compile</phase>
-                        <goals>
-                            <goal>compile</goal>
-                        </goals>
-                    </execution>
-                    <execution>
-                        <id>testCompile</id>
-                        <phase>test-compile</phase>
-                        <goals>
-                            <goal>testCompile</goal>
-                        </goals>
-                    </execution>
-                </executions>
-                <configuration>
-                    <source>${java.version}</source>
-                    <target>${java.version}</target>
-                </configuration>
             </plugin>
         </plugins>
         <resources>
@@ -115,7 +98,7 @@
         <dependency>
             <groupId>com.github.cryptomorin</groupId>
             <artifactId>XSeries</artifactId>
-            <version>9.1.0</version>
+            <version>9.2.0</version>
         </dependency>
         <dependency>
             <groupId>com.arcaniax</groupId>
@@ -132,7 +115,7 @@
         <dependency>
             <groupId>dev.rosewood</groupId>
             <artifactId>rosegarden</artifactId>
-            <version>1.1.0.49-SNAPSHOT</version>
+            <version>1.1.0.51-SNAPSHOT</version>
         </dependency>
     </dependencies>
 </project>

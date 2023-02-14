@@ -5,6 +5,7 @@ import dev.rosewood.rosegarden.command.command.BaseCommand;
 import dev.rosewood.rosegarden.command.framework.CommandContext;
 import dev.rosewood.rosegarden.command.framework.RoseCommandWrapper;
 import dev.rosewood.rosegarden.command.framework.annotation.RoseExecutable;
+import me.refracdevelopment.simplelinks.SimpleLinks;
 import me.refracdevelopment.simplelinks.manager.LocaleManager;
 import me.refracdevelopment.simplelinks.menu.Links;
 import me.refracdevelopment.simplelinks.utilities.chat.Placeholders;
@@ -30,7 +31,7 @@ public class LinksCommand extends BaseCommand {
         Player player = (Player) context.getSender();
 
         if (Config.MENU_ENABLED) {
-            this.rosePlugin.getManager(Links.class).getLinks().openInventory(player);
+            SimpleLinks.getInstance().getMenu().getLinks().openInventory(player);
         } else {
             locale.sendMessage(player, "links", Placeholders.setPlaceholders(player));
         }
