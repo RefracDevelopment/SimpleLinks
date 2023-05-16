@@ -8,7 +8,8 @@ import dev.rosewood.rosegarden.command.framework.annotation.RoseExecutable;
 import me.refracdevelopment.simplelinks.SimpleLinks;
 import me.refracdevelopment.simplelinks.manager.LocaleManager;
 import me.refracdevelopment.simplelinks.menu.LinksItem;
-import me.refracdevelopment.simplelinks.utilities.config.Config;
+import me.refracdevelopment.simplelinks.utilities.Permissions;
+import me.refracdevelopment.simplelinks.config.Config;
 
 public class ReloadCommand extends RoseCommand {
 
@@ -37,7 +38,7 @@ public class ReloadCommand extends RoseCommand {
 
     @Override
     public String getRequiredPermission() {
-        return "simplelinks.command.reload";
+        return Permissions.LINKS_RELOAD_COMMAND;
     }
 
 }

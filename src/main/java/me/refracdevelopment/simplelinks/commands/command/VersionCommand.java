@@ -7,6 +7,7 @@ import dev.rosewood.rosegarden.command.framework.RoseCommandWrapper;
 import dev.rosewood.rosegarden.command.framework.annotation.RoseExecutable;
 import dev.rosewood.rosegarden.utils.StringPlaceholders;
 import me.refracdevelopment.simplelinks.manager.LocaleManager;
+import me.refracdevelopment.simplelinks.utilities.Permissions;
 
 public class VersionCommand extends RoseCommand {
 
@@ -36,6 +37,6 @@ public class VersionCommand extends RoseCommand {
 
     @Override
     public String getRequiredPermission() {
-        return "simplelinks.version";
+        return Permissions.LINKS_VERSION_COMMAND;
     }
 }

@@ -7,9 +7,8 @@ import dev.rosewood.rosegarden.command.framework.RoseCommandWrapper;
 import dev.rosewood.rosegarden.command.framework.annotation.RoseExecutable;
 import me.refracdevelopment.simplelinks.SimpleLinks;
 import me.refracdevelopment.simplelinks.manager.LocaleManager;
-import me.refracdevelopment.simplelinks.menu.Links;
 import me.refracdevelopment.simplelinks.utilities.chat.Placeholders;
-import me.refracdevelopment.simplelinks.utilities.config.Config;
+import me.refracdevelopment.simplelinks.config.Config;
 import org.bukkit.entity.Player;
 
 public class LinksCommand extends BaseCommand {
@@ -30,10 +29,11 @@ public class LinksCommand extends BaseCommand {
 
         Player player = (Player) context.getSender();
 
-        if (Config.MENU_ENABLED) {
-            SimpleLinks.getInstance().getMenu().getLinks().openInventory(player);
-        } else {
+        if (!Config.MENU_ENABLED) {
             locale.sendMessage(player, "links", Placeholders.setPlaceholders(player));
+            return;
         }
+
+        SimpleLinks.getInstance().getMenu().getLinks().openInventory(player);
     }
 }

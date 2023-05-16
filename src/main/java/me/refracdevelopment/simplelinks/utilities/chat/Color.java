@@ -11,6 +11,8 @@ import org.bukkit.entity.Player;
 public class Color {
 
     public static String translate(CommandSender sender, String source) {
+        source = Placeholders.setPlaceholders(sender, source);
+
         if (sender instanceof Player) {
             return PlaceholderAPIHook.applyPlaceholders((Player) sender, translate(source));
         } else return translate(source);

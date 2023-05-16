@@ -12,7 +12,7 @@ import me.refracdevelopment.simplelinks.manager.ConfigurationManager;
 import me.refracdevelopment.simplelinks.manager.LocaleManager;
 import me.refracdevelopment.simplelinks.menu.Links;
 import me.refracdevelopment.simplelinks.utilities.chat.Color;
-import me.refracdevelopment.simplelinks.utilities.config.Config;
+import me.refracdevelopment.simplelinks.config.Config;
 import org.bukkit.Bukkit;
 import org.bukkit.command.CommandSender;
 import org.bukkit.plugin.PluginManager;
@@ -43,11 +43,6 @@ public class SimpleLinks extends RosePlugin {
         long startTiming = System.currentTimeMillis();
         PluginManager pluginManager = this.getServer().getPluginManager();
 
-        Config.loadConfig();
-        Color.log("&c==========================================");
-        Color.log("&aAll files have been loaded correctly!");
-        Color.log("&c==========================================");
-
         // Make sure the server has PlaceholderAPI
         if (!pluginManager.isPluginEnabled("PlaceholderAPI")) {
             Color.log("&cPlease install PlaceholderAPI onto your server to use this plugin.");
@@ -61,6 +56,11 @@ public class SimpleLinks extends RosePlugin {
             this.getServer().getPluginManager().disablePlugin(this);
             return;
         }
+
+        Config.loadConfig();
+        Color.log("&c==========================================");
+        Color.log("&aAll files have been loaded correctly!");
+        Color.log("&c==========================================");
 
         Color.log("&aLoaded commands.");
         pluginManager.registerEvents(new JoinListener(), this);

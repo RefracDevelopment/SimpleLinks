@@ -3,7 +3,7 @@ package me.refracdevelopment.simplelinks.menu;
 import me.refracdevelopment.simplelinks.SimpleLinks;
 import me.refracdevelopment.simplelinks.utilities.ItemBuilder;
 import me.refracdevelopment.simplelinks.utilities.chat.Color;
-import me.refracdevelopment.simplelinks.utilities.config.Config;
+import me.refracdevelopment.simplelinks.config.Config;
 import org.bukkit.Bukkit;
 import org.bukkit.Material;
 import org.bukkit.entity.Player;

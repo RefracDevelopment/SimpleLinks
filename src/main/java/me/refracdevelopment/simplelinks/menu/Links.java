@@ -1,8 +1,6 @@
 package me.refracdevelopment.simplelinks.menu;
 
-import dev.rosewood.rosegarden.RosePlugin;
-import dev.rosewood.rosegarden.manager.Manager;
-import me.refracdevelopment.simplelinks.utilities.config.Config;
+import me.refracdevelopment.simplelinks.config.Config;
 
 import java.util.HashMap;
 import java.util.Map;

@@ -12,7 +12,7 @@ import me.refracdevelopment.simplelinks.manager.LocaleManager;
 import me.refracdevelopment.simplelinks.utilities.ItemBuilder;
 import me.refracdevelopment.simplelinks.utilities.Utilities;
 import me.refracdevelopment.simplelinks.utilities.chat.Color;
-import me.refracdevelopment.simplelinks.utilities.config.Config;
+import me.refracdevelopment.simplelinks.config.Config;
 import org.bukkit.enchantments.Enchantment;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.ItemFlag;

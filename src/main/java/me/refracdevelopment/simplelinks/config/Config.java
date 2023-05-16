@@ -1,10 +1,11 @@
-package me.refracdevelopment.simplelinks.utilities.config;
+package me.refracdevelopment.simplelinks.config;
 
 import me.refracdevelopment.simplelinks.manager.ConfigurationManager;
 import org.bukkit.Material;
 import org.bukkit.configuration.ConfigurationSection;
 
 public class Config {
+
     public static boolean MENU_ENABLED;
     public static String MENU_TITLE;
     public static int MENU_SIZE;
@@ -14,6 +15,7 @@ public class Config {
     public static ConfigurationSection MENU_ITEMS;
 
     public static void loadConfig() {
+        // Menu
         MENU_ENABLED = ConfigurationManager.Setting.MENU_ENABLED.getBoolean();
         MENU_TITLE = ConfigurationManager.Setting.MENU_TITLE.getString();
         MENU_SIZE = ConfigurationManager.Setting.MENU_SIZE.getInt();
