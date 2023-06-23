@@ -1,7 +1,7 @@
 # SimpleLinks
 A simple links plugin.
 
-[Spigot](https://www.spigotmc.org/resources/links-1-8-1-16.90283/) [Polymart](https://polymart.org/resource/links-1-8-1-16.1175)
+[Spigot](https://www.spigotmc.org/resources/links-1-8-1-16.90283/)
 
 ### Issue Reporting/Support
 
