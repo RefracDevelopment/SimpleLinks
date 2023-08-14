@@ -44,15 +44,8 @@ public class SimpleLinks extends RosePlugin {
         PluginManager pluginManager = this.getServer().getPluginManager();
 
         // Make sure the server has PlaceholderAPI
-        if (!pluginManager.isPluginEnabled("PlaceholderAPI")) {
+        if (pluginManager.getPlugin("PlaceholderAPI") == null) {
             Color.log("&cPlease install PlaceholderAPI onto your server to use this plugin.");
-            this.getServer().getPluginManager().disablePlugin(this);
-            return;
-        }
-
-        // Make sure the server is on MC 1.16
-        if (NMSUtil.getVersionNumber() < 16) {
-            Color.log("&cThis plugin only supports 1.16+ Minecraft.");
             this.getServer().getPluginManager().disablePlugin(this);
             return;
         }
@@ -90,7 +83,7 @@ public class SimpleLinks extends RosePlugin {
 
     public void updateCheck(CommandSender sender, boolean console) {
         try {
-            String urlString = "https://updatecheck.refracdev.ml";
+            String urlString = "https://refracdev-updatecheck.refracdev.workers.dev/";
             URL url = new URL(urlString);
             HttpURLConnection connection = (HttpURLConnection) url.openConnection();
             connection.setRequestMethod("GET");
